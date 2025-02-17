@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import NavBar from './components/NavBar'
 import { Grid, GridItem, Show } from '@chakra-ui/react'
 import GameGrid from './components/GameGrid'
+import GenreList from './components/GenreList'
 
 function App() {
 
@@ -11,13 +12,14 @@ function App() {
     <Grid
   templateAreas={{base:`"header" "main"`,
                   lg:`"header header" "aside main"`}}
+  templateColumns={{base: '1fr', lg: '200px 1fr'}}
 >
   <GridItem pl='2' area={'header'}>
     <NavBar />
   </GridItem>
   <Show above="lg">
     <GridItem pl='2' bg='pink.300' area={'aside'}>
-      Aside
+      <GenreList />
     </GridItem>
   </Show>
   <GridItem pl='2' area={'main'}>
