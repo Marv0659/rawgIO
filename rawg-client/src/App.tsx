@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import NavBar from './components/NavBar'
 import { Grid, GridItem, Show } from '@chakra-ui/react'
+import GameGrid from './components/GameGrid'
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
   templateAreas={{base:`"header" "main"`,
                   lg:`"header header" "aside main"`}}
 >
-  <GridItem pl='2' bg='orange.300' area={'header'}>
+  <GridItem pl='2' area={'header'}>
     <NavBar />
   </GridItem>
   <Show above="lg">
@@ -19,8 +20,8 @@ function App() {
       Aside
     </GridItem>
   </Show>
-  <GridItem pl='2' bg='green.300' area={'main'}>
-    Main
+  <GridItem pl='2' area={'main'}>
+    <GameGrid />
   </GridItem>
 </Grid>
   )
