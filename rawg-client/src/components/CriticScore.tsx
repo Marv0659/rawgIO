@@ -13,6 +13,8 @@ const getColor = (score: number) => {
     
 }
 
+if (!score) return null
+
   return (
     <Badge border="1px solid" fontSize="14px" paddingX={2} borderRadius="4px" colorScheme={getColor(score)}>
       {score}
