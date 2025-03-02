@@ -1,7 +1,7 @@
 import useData from "./useData";
-import { Genre } from "./useGenres";
-import { Platform } from "./usePlatforms";
-import { Store } from "./useStores";
+import { Genre } from '../hooks/useGenres'
+import { Platform } from '../hooks/usePlatforms'
+import { Store } from '../hooks/useStores'
 
 export interface Game {
   id: number;
